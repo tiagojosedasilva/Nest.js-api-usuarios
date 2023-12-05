@@ -31,4 +31,8 @@ export class UserService {
   remove(id: number) {
     return this.userReposiory.delete(id);
   }
+
+  buscarPorNome(nome: string){
+    return this.userReposiory.findOne({where: {nome}})
+  }
 }
